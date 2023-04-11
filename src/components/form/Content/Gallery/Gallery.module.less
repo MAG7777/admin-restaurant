@@ -1,0 +1,84 @@
+.gallery {
+  position: relative;
+}
+
+.inner {
+  position: relative;
+}
+
+.preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  user-select: none;
+}
+
+.uploadArea {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  z-index: 1;
+
+  transform: translateX(-50%);
+}
+
+.image {
+  position: relative;
+
+  min-width: 0;
+  min-height: 0;
+  max-height: 100%;
+}
+
+.item {
+  cursor: -webkit-grab;
+  cursor: grab;
+
+  &:active {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+  }
+
+  &__clickable {
+    cursor: pointer;
+  }
+
+  img {
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+}
+
+.imageError{
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid var(--ant-error-color);
+
+    pointer-events: none;
+  }
+}
+
+.gallery-image-error {
+  box-shadow: 0 0 2px 2px var(--ant-error-color);
+}
+
+.gallery__error {
+  .upload-button_btn {
+    background-color: rgba(var(--ant-error-color), 40%);
+
+    &:hover {
+      background-color: rgba(var(--ant-error-color), 45%);
+    }
+  }
+}

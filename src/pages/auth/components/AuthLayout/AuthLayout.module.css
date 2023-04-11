@@ -1,0 +1,18 @@
+.wrapper {
+  /* 64px header height */
+  padding-top: 64px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.content {
+  max-width: 624px;
+  margin: 24px auto 0;
+  padding: 0 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  flex: 1;
+}

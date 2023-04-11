@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 50px;
+  &.isMobile {
+    flex-flow: column;
+  }
+}
+.main {
+  flex: 1 1 200px;
+  order: 1;
+  min-width: 0;
+}
+.aside {
+  width: 266px;
+  order: 1;
+}
+
+.isMobile {
+  .main {
+    width: 100%;
+    flex: auto;
+    order: 2;
+  }
+  .aside {
+    width: 100%;
+    flex: auto;
+    order: 1;
+  }
+}
